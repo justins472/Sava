@@ -21,7 +21,7 @@ async def on_command_error(error, ctx):
 @client.command(pass_context=True)
 async def help(ctx):
     author = ctx.message.author
-    embed = discord.Embed(color=0xff00e6)
+    embed = discord.Embed(color=random.randint(0, 0xffffff))
     embed.set_author(name='SavaBot Help!')
     embed.add_field(name='Current Status:', value='We are currently working on the bot Sorry!', inline=False)
     await client.say(embed=embed)
