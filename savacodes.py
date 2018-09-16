@@ -15,7 +15,7 @@ async def on_command_error(error, ctx):
     if isinstance(error, commands.CommandNotFound):
         embed = discord.Embed(color=0xff00e6)
         embed.add_field(name='Unknown Error!', value='```There was an unknown error! We will report this to the staff team ASAP!', inline=False)
-        await client.say(embed=embed)
+        await client.send_message(channel, embed=embed)
 
  
 client.run(TOKEN)
